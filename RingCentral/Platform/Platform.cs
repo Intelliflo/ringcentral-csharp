@@ -17,6 +17,9 @@ namespace RingCentral
         private const string RevokeEndpoint = "restapi/oauth/revoke";
 
         public HttpClient _client { private get; set; }
+
+        // TODO combine with _client
+        public HttpClient Client { get { return _client; }}
         public Auth Auth { get; private set; }
 
         private object thisLock = new object();
